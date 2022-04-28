@@ -1,6 +1,8 @@
 import type { NextPage } from "next";
 import { Button } from "../components/Button";
 import { Container } from "../components/Container";
+import { Box } from "../components/context/Box";
+import { ThemeContextProvider } from "../components/context/ThemeContext";
 import { Greet } from "../components/Greet";
 import { Heading } from "../components/Heading";
 import { Input } from "../components/Input";
@@ -32,7 +34,9 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Counter />
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
     </>
   );
 };
